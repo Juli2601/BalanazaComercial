@@ -1,0 +1,296 @@
+/* Estilos generales */
+body {
+    background: 'white';/*#22869A*/; 
+    margin: 0;
+    padding: 0;
+}
+/* Encabezado fijo en la parte superior */
+        .encabezado-superior {
+            border-bottom-left-radius: 10px; /* Radio en la esquina inferior izquierda */
+            border-bottom-right-radius: 10px; /* Radio en la esquina inferior derecha */
+            position: fixed;      /* Fija la posición en la pantalla */
+            top: 0;               /* Coloca la línea en la parte superior */
+            left: 0;              /* Alinea la línea al borde izquierdo */
+            width: 100%;          /* Ocupa todo el ancho de la pantalla */
+            height: 60px;         /* Altura del encabezado */
+            background-color: #9ce0db; /* Color de fondo */
+            color: white;         /* Color del texto */
+            display: flex;        /* Flexbox para alinear imagen y texto */
+            align-items: center;  /* Centra verticalmente los elementos */
+            padding: 0 20px;      /* Espacio alrededor del contenido */
+            box-sizing: border-box;
+            z-index: 1000;        /* Asegura que esté sobre otros elementos */
+        }
+
+        /* Estilo de la imagen */
+        .encabezado-superior img {
+            width: 40px;          /* Ancho de la imagen */
+            height: 40px;         /* Alto de la imagen */
+            border-radius: 2px;   /* Bordes redondeados (opcional) */
+            margin-right: 15px;   /* Espacio entre la imagen y el texto */
+        }
+
+        /* Estilo del título */
+        .encabezado-superior h1 {
+            color: black;
+            font-family: 'Arial';
+            font-size: 18px;      /* Tamaño del texto */
+            margin: 0;            /* Elimina el margen del título */
+            font-weight: normal;
+        }
+
+        /* Espaciado para el contenido debajo del encabezado */
+        .contenido {
+            margin-top: 80px; /* Deja espacio debajo del encabezado fijo */
+            padding: 20px;
+        }
+
+svg a {
+    cursor: pointer;
+}
+
+svg{
+    transform: translateX(-70px);
+}
+
+.limite{
+    border-radius: 20px;
+    /*background-color: white;*/
+    overflow: hidden;
+}
+
+/* Título principal */
+.Titulo1 {
+    font-family: 'Arial';
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: #22869A; /* Color del texto */
+    text-align: center;
+    border: 2px solid white; /* Borde de color que combine (verde) */
+    border-radius: 15px; /* Radio de los bordes */
+    padding: 10px; /* Espacio interno */
+    background-color: #C2E3ED; /* Color de fondo con opacidad (verde claro) */
+    margin: 20px 0; /* Espacio alrededor del título */
+}
+
+/* Contenedor principal de mapa y botones */
+.mapadiv {
+    width: 100%;
+    margin: 40px auto 0 auto; /* Añade 40px de espacio arriba */
+    display: flex; /* Usar flex para alinear las columnas */
+}
+
+.mapcol {
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto 0 auto;
+    border-radius: 20px;
+}
+
+.limite svg {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    clip-path: inset(20px 50px 0 120px round 20px); /* Recorta 50px a la izquierda */
+}
+
+#volver-button {
+    height: 50px;
+    width: auto;
+    min-width: 140px;
+    padding: 0 10px;
+    font-size: 2vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px; /* Bordes más redondeados para un toque suave */
+    background-color: #FADADD; /* Rosa pastel */
+    color: #6B5B95; /* Un tono violeta suave para el texto */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto suave de cambio de color y escala */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#volver-button:hover {
+    background-color: #FFDDC1; /* Un tono pastel más claro */
+    color: #355C7D; /* Color de texto ligeramente más oscuro */
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+}
+
+#volver-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(245, 183, 255, 0.6); /* Borde de enfoque pastel */
+}
+
+
+/* Contenedor de botones principales */
+.botones {
+    padding: 5px;
+    width: 40%;
+    display: flex; /* Usar flexbox para alinear los botones en línea */
+    gap: 20px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-right: 10px; /* Espacio alrededor del contenedor */
+    flex-direction: column; /* Alinea botones en columna */
+    border-radius: 10px;
+    margin: 20px auto 0 auto; /* Margen superior de 100px y márgenes automáticos para los laterales */
+}
+
+/* Estilos de los botones */
+.boton {
+    height: 50px; /* Altura fija para los botones */
+    width: auto; /* Ancho se adapta al contenido */
+    min-width: 160px; /* Ancho mínimo para los botones */
+    padding: 0 10px; /* Espacio dentro del botón (izquierda y derecha) */
+    font-size: 2vw; /* Tamaño de la fuente relativo al ancho de la vista */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Sin borde */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: white; /* Color de fondo */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    display: flex; /* Usar flex para centrar el contenido del botón */
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+}
+
+.boton:hover {
+    background-color: #e0e0e0; /* Cambia el color al pasar el mouse */
+}
+
+.boton:focus {
+    outline: none; /* Quitar el borde del enfoque */
+}
+
+.boton.active {
+    background-color: #FAD0C7; /* Color al hacer clic */
+}
+
+#region {
+    color: #005954;
+    font-family: 'Arial';
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    border: 3px solid #9ce0db; 
+}
+
+#departamentos-button {
+   color: #005954;
+    font-family: 'Arial';
+    font-size: clamp(1.5rem, 3vw, 3rem);
+     border: 3px solid #9ce0db;  
+}
+
+#conclusion {
+   color: #005954;
+    font-family: 'Arial';
+    font-size: clamp(1.5rem, 3vw, 3rem);
+     border: 3px solid #9ce0db;  
+}
+
+/* Estilos de los paths del mapa */
+.mapadiv path {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+/* Contenedor de la imagen del departamento */
+.imagen-container {
+    display: flex;
+    flex-direction: column; /* Alinear imágenes en columna, una debajo de otra */
+    align-items: center; /* Centrar imágenes horizontalmente */
+    gap: 10px; /* Espacio entre cada imagen */
+    margin-top: 20px; /* Espacio arriba del contenedor de imagen */
+}
+
+.imagen-container img {
+    max-width: 90%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.contenedor-comercio{
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+}
+
+
+/* Colores de las regiones en el mapa */
+#Andina path {
+    fill: #FFFF67; /* Amarillo para la región Andina */
+}
+
+#Caribe path {
+    fill: #FF6600; /* Rojo para la región Caribe */
+}
+
+#Pacifica path {
+    fill: #35CB36; /* Verde para la región Pacífica */
+}
+
+#Orinoquia path {
+    fill: #00FFFE; /* Turquesa para la región Orinoquía */
+}
+
+#Amazonica path {
+    fill: #D002FF; /* Púrpura para la región Amazónica */
+}
+
+#Insular path {
+    fill: #3399FE; /* Color para la región Insular */
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.carrera {
+    background-color: #5dc1b9;
+    padding: 1px;
+    font-family: 'Arial Black';
+    font-size: 15px;
+    color: white;
+}
+
+.foot-image {
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Centrar verticalmente la imagen y el texto */
+    justify-content: center; /* Opcional: centrar el contenido en el footer */
+    padding: 4px;
+    gap: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.link:visited{
+    color: white;
+}
+
+.imagen-comercio {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.nombres-estudiantes {
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+.nombres-estudiantes p {
+    line-height: 0.3; /* Reduce el espacio entre líneas */
+}
+
+.foot-uni{
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Centrar verticalmente la imagen y el texto */
+    justify-content: center; /* Opcional: centrar el contenido en el footer */
+    padding: 1px;
+    gap: 15px; /* Espacio entre la imagen y el texto */
+}
